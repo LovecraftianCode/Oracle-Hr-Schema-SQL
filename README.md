@@ -7,7 +7,7 @@
 
 > **Proceso completo de instalación del esquema HR en Oracle 21c XE, generación de XML y validación mediante triggers y XSD.**
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
 - [Sobre este proyecto](#sobre-este-proyecto)
 - [Requisitos previos](#requisitos-previos)
