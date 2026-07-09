@@ -1,0 +1,8 @@
+<employees>
+    <employee>
+        <empno>888</empno>
+        <!-- Falta el campo <ename> -->
+        <job>PRUEBA_INVALIDA</job>
+        <hiredate>01-JAN-2024</hiredate>
+    </employee>
+</employees>
