@@ -1,3 +1,7 @@
+-- Insertar un XML que NO cumple con la estructura (falta 'ename')
+INSERT INTO xml_tab VALUES (
+    3,
+    XMLTYPE('<?xml version="1.0" encoding="UTF-8"?>
 <employees>
     <employee>
         <empno>888</empno>
@@ -5,4 +9,5 @@
         <job>PRUEBA_INVALIDA</job>
         <hiredate>01-JAN-2024</hiredate>
     </employee>
-</employees>
+</employees>')
+);

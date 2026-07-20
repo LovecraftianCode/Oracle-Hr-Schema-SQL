@@ -1,3 +1,6 @@
+INSERT INTO xml_tab VALUES (
+    2,
+    XMLTYPE('<?xml version="1.0" encoding="UTF-8"?>
 <employees>
     <employee>
         <empno>999</empno>
@@ -5,4 +8,5 @@
         <job>PRUEBA</job>
         <hiredate>01-JAN-2024</hiredate>
     </employee>
-</employees>
+</employees>')
+);

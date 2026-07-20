@@ -1,0 +1,29 @@
+BEGIN
+    DBMS_XMLSCHEMA.registerSchema(
+        SCHEMAURL => 'employees.xsd',
+        SCHEMADOC => '<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xdb="http://xmlns.oracle.com/xdb">
+    <xs:element name="employees" xdb:SQLType="EMPLOYEES_XML_T">
+        <xs:complexType xdb:SQLType="EMPLOYEES_XML_T">
+            <xs:sequence>
+                <xs:element name="employee" type="EmployeeType" 
+                            minOccurs="0" maxOccurs="unbounded"
+                            xdb:SQLCollType="EMPLOYEE_COLL_T"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="EmployeeType" xdb:SQLType="EMPLOYEE_XML_T">
+        <xs:sequence>
+            <xs:element name="empno" type="xs:integer"/>
+            <xs:element name="ename" type="xs:string"/>
+            <xs:element name="job" type="xs:string"/>
+            <xs:element name="hiredate" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>',
+        LOCAL => TRUE,
+        GENTYPES => TRUE
+    );
+END;
+/
